@@ -12,6 +12,6 @@ NIM : 0110220151
 
 ## Screenshots
 
-![picture](ss/1.png)
+![picture](ss/1.PNG)
 
-![picture](ss/2.png)
+![picture](ss/2.PNG)
