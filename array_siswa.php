@@ -26,10 +26,10 @@ $nilai_uts = $_POST['uts'];
 $nilai_uas = $_POST['uas'];
 $nilai_tugas = $_POST['tugas'];
 
-$ns1 = ['nama' => 'Rivan Albani Ray', 'matkul' => 'Pemrograman Web', 'nilai_uts' => 88, 'nilai_uas' => 87, 'nilai_tugas' => 88];
-$ns2 = ['nama' => $nama_siswa, 'matkul' => $matkul, 'nilai_uts' => $nilai_uts, 'nilai_uas' => $nilai_uas, 'nilai_tugas' => $nilai_tugas];
+$list1 = ['nama' => 'Rivan Albani Ray', 'matkul' => 'Pemrograman Web', 'nilai_uts' => 88, 'nilai_uas' => 87, 'nilai_tugas' => 88];
+$list2 = ['nama' => $nama_siswa, 'matkul' => $matkul, 'nilai_uts' => $nilai_uts, 'nilai_uas' => $nilai_uas, 'nilai_tugas' => $nilai_tugas];
 
-$ar_nilai = [$ns1, $ns2];
+$list_siswa = [$list1, $list2];
 
 ?>
 
@@ -38,9 +38,9 @@ $ar_nilai = [$ns1, $ns2];
     <div class="col-md-12 mb-5">
       <h2 class="mt-5 text-center text-secondary">Aplikasi Daftar Nilai Siswa</h2>
     </div>
-    <div class="col-md-12 d-flex justify-content-center">
-      <div class="card mb-3 border-primary w-100">
-        <div class="card-header text-white bg-info">Daftar Nilai Siswa</div>
+    <div class="col-md-12 d-flex justify-content-center px-5">
+      <div class="card mb-3  w-100">
+        <div class="card-header text-white bg-info ">Daftar Nilai Siswa</div>
         <div class="card-body">
           <table class="table">
             <thead class="thead-dark">
@@ -56,16 +56,16 @@ $ar_nilai = [$ns1, $ns2];
             <tbody>
               <?php
               $no = 1;
-              foreach ($ar_nilai as $ns) {
+              foreach ($list_siswa as $action) {
               ?>
                 <tr>
 
                   <th scope="row"><?= $no++ ?></th>
-                  <td><?= $ns['nama'] ?></td>
-                  <td><?= $ns['matkul'] ?></td>
-                  <td><?= $ns['nilai_uts'] ?></td>
-                  <td><?= $ns['nilai_uts'] ?></td>
-                  <td><?= $ns['nilai_tugas'] ?></td>
+                  <td><?= $action['nama'] ?></td>
+                  <td><?= $action['matkul'] ?></td>
+                  <td><?= $action['nilai_uts'] ?></td>
+                  <td><?= $action['nilai_uts'] ?></td>
+                  <td><?= $action['nilai_tugas'] ?></td>
 
                 </tr>
 
